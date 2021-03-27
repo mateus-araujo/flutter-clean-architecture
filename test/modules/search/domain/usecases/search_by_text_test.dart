@@ -13,7 +13,7 @@ main() {
   final repository = SearchReposistoryMock();
   final usecase = SearchByTextImpl(repository);
 
-  test('should returns a ResultSearch list', () async {
+  test('should returns a List<ResultSearch>', () async {
     when(repository.search(any))
         .thenAnswer((_) async => Right(<ResultSearch>[]));
 

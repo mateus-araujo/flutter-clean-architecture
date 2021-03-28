@@ -13,6 +13,12 @@ class SearchStart implements SearchState {}
 
 class SearchLoading implements SearchState {}
 
+class SearchLoadingMore implements SearchState {
+  final List<ResultSearch> list;
+
+  SearchLoadingMore(this.list);
+}
+
 class SearchError implements SearchState {
   final FailureSearch error;
 
